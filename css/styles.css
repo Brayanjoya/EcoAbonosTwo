@@ -1,0 +1,439 @@
+/* Restablecer bordes y dar tipo de letra*/
+* {
+    font-family: century gothic;
+}
+
+/* Fuentes */
+@font-face {
+    font-family: "tituloprincipal";
+    src: url('../fonts/Lobster/Lobster-Regular.ttf');
+}
+
+@font-face {
+    font-family: "titulosH1";
+    src: url('../fonts/abrilFatface/AbrilFatface-Regular.ttf');
+}
+
+@font-face {
+    font-family: "parrafos";
+    src: url('../fonts/comic_neue/ComicNeue-Regular.ttf');
+}
+
+@font-face {
+    font-family: "parrafoR";
+    src: url('../fonts/Arvo_diplay/Arvo-Regular.ttf');
+}
+
+@font-face {
+    font-family: "texto";
+    src: url('../fonts/ubuntu/Ubuntu-Light.ttf');
+}
+
+body {
+    margin-top: 80px;
+    background-image: url('../images/logoecoabonos.jpeg');
+    background-size: 100%;
+    background-position: center;
+}
+
+/* Etiqueta a*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* navigation desktop*/
+.menu__smartphone {
+    display: none;
+}
+
+.navbar {
+    margin-top: -80px;
+    background-color: #88888841;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    
+}
+
+.navbar__header {
+    display: inline-block;
+    width: 80px;
+    margin-top: auto;
+    margin-left: 20px;
+    margin-right: calc(100% - 750px);
+}
+
+.navbar__desktop-li {
+    display: inline-flex;
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.navbar__desktop-ul {
+    color: #000;
+}
+
+.navbar__desktop-ul a{
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar__desktop-li:hover {
+    color: #5f1;
+}
+
+.navbar__desktop-li:hover > a {
+    color: #5f1;
+    font-weight: bold;
+    text-decoration: 5px underline #5f1;
+}
+
+
+/* Diferenciar items del nav -> identificar pagina en donde nos encontramos*/
+a[href="#"] {
+    color: #5f1;
+    font-weight: bold;
+    text-decoration: 5px underline #5f1;
+}
+
+/* pantalla */
+#container {
+    background: linear-gradient(to bottom, #4499eed1, #aaffff91);
+    padding: 15px;
+    margin: 40px 50px;
+    border-radius: 60px;
+    border: 2px solid #000;
+}
+
+.first__title {
+    text-align: center;
+    font-family: "tituloprincipal";
+    font-size: 42px;
+}
+
+.parrafo {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.piox {
+    text-decoration: 1px underline #000;
+}
+
+.piox:hover {
+    color: #5f1;
+    text-decoration: 1px underline #5f1;
+
+}
+
+a[title="perfil facebook"]:hover {
+    text-decoration: 1px underline #000;
+    margin-left: 30px;
+}
+
+.img__description {
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+}
+
+.img__border {
+    border-radius: 240px;
+}
+
+
+/* Ajustes del footer*/
+.container__footer {
+    background: linear-gradient(to top, #5f1, #49e );
+    display: flexbox;
+    padding: 24px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.container__footer-p {
+    font-size: 28px;
+    padding: 12px;;
+}
+
+.container__footer-iconosredes {
+    padding: 12px;
+    font-size: 30px;
+}
+
+.container__footer-iconosredes i {
+    margin: 12px;
+}
+
+/*Iconos Redes*/
+.iconos__redes  {
+    height: 1px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.iconos__redes i {
+    padding: 15px;
+   
+}
+
+.facebook:hover {
+    color: #35a;
+}
+
+.instagram:hover {
+    color: #91a;
+}
+
+.youtube:hover {
+    color: #d11;
+}
+
+.linkedin:hover {
+    color: #35a;
+}
+
+.facebook:active {
+    cursor: progress;
+}
+
+.instagram:active {
+    cursor: progress;
+}
+
+.youtube:active {
+    cursor: progress;
+}
+
+
+@media only screen and (max-width: 800px) {
+    * {
+        font-family: "texto";
+    }
+}
+/** navegation movil 760 px*/
+.nav__responsive-button-container {
+    position: absolute;
+    width: 100%;
+    font-size: 30px;
+    margin-top: -53px;
+    z-index: 100;
+    
+}
+
+.nav__responsive-button {
+    
+    padding: 15px 25px;
+    text-align: right;
+    width: 100%
+}
+
+
+@media only screen and (max-width: 760px) {
+
+    .navbar__desktop {
+        display: none;
+    }
+
+    .navbar  {
+        display: block;
+        background-color: transparent;
+    }
+
+    .navbar__header {
+        margin: auto auto;
+        display: inline-block;
+    }
+
+    /* nav__responsive-ul segun curso dalto*/
+    .menu__smartphone {
+        display: block;
+        position: absolute;
+        width: 100%; /* vh en heigh para toda la pantalla//*/
+        
+    }
+
+    .menu__smartphone-li {
+        text-align: center;
+        padding: 15px;
+        color: #000;
+    }
+
+    .menu__smartphone-li a{
+        color: #000;
+        font-weight: bold;
+    }
+
+    .nav__li-container {
+        background: linear-gradient(to bottom, #49e, #aff);
+        position: relative;
+        z-index: 1;
+        top: -1000px;
+       
+    }
+
+    .menu__smartphone-ul {
+        height: 0px;
+    }
+
+    .menu__smartphone-ul:hover > .nav__li-container {
+        transition: all .6s;
+        top: 0px;
+    }
+
+    /* Animacion de activacion del menu*/
+
+    .nav__responsive-button:hover {
+        transition: .6s;
+        color: #5f1;
+    }
+
+    /* Simples animaciones de cuando el mouse está encima aunque en celulares no ve va a ver pero me vale verga */
+
+    .menu__smartphone-li:hover {
+        color: #5f1;
+    }
+
+    .menu__smartphone-li:hover > a {
+        color: #5f1;
+        font-weight: bold;
+        text-decoration: 5px underline #5f1;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    a {
+        text-decoration: none;
+    }
+
+    #container {
+        padding: 12px;
+        margin: 40px 20px;
+    }
+
+    .first__title {
+        font-size: 36px;
+    }
+
+    .parrafo {
+        font-size: 16px;
+    }
+
+    .iconos__redes  {
+        font-size: 25px;
+    }
+
+    .iconos__redes i {
+        padding: 8px;
+   
+    }
+    
+}
+
+@media only screen and (max-width: 330px) {
+    a {
+        text-decoration: none;
+    }
+
+    .first__title {
+        font-size: 28px;
+    }
+
+    .parrafo {
+    font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    
+    p {
+        font-size: 12px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 270px) {
+    
+    .app {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .first__title {
+        font-size: 60px;
+    }
+
+    .parrafo {
+        font-size: 40px;
+    }
+
+    
+
+    nav a {
+        font-size: 22px
+    }
+
+    .navbar__header {
+        margin-right: calc(100% - 900px);
+    }
+
+    .navbar__desktop-li {
+        font-size: 25px;
+    }
+
+    .iconos__redes  {
+        font-size: 40px;
+    }
+
+    
+    .container__footer-p {
+        font-size: 34px;
+    }
+
+    .container__footer-iconosredes {
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+    .first__title {
+        font-size: 70px;
+    }
+
+    .parrafo {
+        font-size: 50px;
+    }
+
+    nav a {
+        font-size: 32px
+    }
+
+    .navbar__header {
+        margin-right: calc(100% - 1200px);
+    }
+
+    .menu__smartphone-li {
+        font-size: 35px;
+    }
+
+    .iconos__redes  {
+        font-size: 50px;
+        margin: 15px;
+    }
+
+    .container__footer-p {
+        font-size: 44px;
+    }
+
+    .container__footer-iconosredes {
+        font-size: 50px;
+    }
+
+}
